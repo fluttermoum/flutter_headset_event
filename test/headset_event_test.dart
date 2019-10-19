@@ -16,7 +16,7 @@ void main() {
 
   test('getCurrentState', () async {
     when(methodChannel.invokeMethod<int>('getCurrentState'))
-        .thenAnswer((Invocation invoke) => Future<int>.value(0));
+        .thenAnswer((Invocation invoke) => Future<int>.value(4));
     expect(await he.getCurrentState, HeadsetState.DISCONNECT);
 
     when(methodChannel.invokeMethod<int>('getCurrentState'))
